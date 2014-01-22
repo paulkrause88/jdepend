@@ -3,10 +3,10 @@
 <!-- Takes the XML output from JDepend and transforms it into the 'graphml' 
 	language used by yEd (yed.yworks.com) to generate a project dependency graph. 
 	The packages show up as rectangles with the package name and the number of 
-	classes. Arrows point to other packages the package depends on. The rectangle 
-	is colored blue, but it turns to darker shades of red the further the package 
-	is from the 'main line'. Contributed by Paul Krause, building on the work 
-	of David Bock. -->
+	classes. Arrows point to other packages the package depends on. 
+
+	Contributed by Paul Krause, building on the work of David Bock. 
+-->
 
 <xsl:stylesheet version="1.0"
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns="http://graphml.graphdrawing.org/xmlns"
