@@ -165,7 +165,19 @@
 
   </target>
 
-  <target name="javadoc" depends="compile"
+  <target name="jdepend-to-graphml"
+          depends="jdepend-to-graphviz"
+     description="Runs JDepend and converts XML output into GraphML">
+
+    <xslt basedir="${docs.dir}"
+          destdir="${docs.dir}"
+          includes="jdepend-report.xml"
+          extension=".graphml"
+          style="contrib/jdepend2graphml.xsl"/>
+
+  </target>
+
+	<target name="javadoc" depends="compile"
           description="Generates JavaDoc">
     
     <mkdir dir="${javadoc.dir}"/>
